@@ -38,9 +38,9 @@ module Adhearsion
         }
         email Hash.new(via: :sendmail), desc: "Used to configure the email notifier, with options accepted by the pony (https://github.com/benprew/pony) gem"
         sentry {
-          dsn 'https://<user>:<password>@app.getsentry.com/<application>', desc: "The Sentry endpoin for your application"
-          current_environment 'production', 'The current execution environment {production, test, development}'
-          environments ['staging', 'production'], 'The environments for which Sentry is active'
+          dsn 'https://<user>:<password>@app.getsentry.com/<application>', desc: "The SENTRY_DSN, or client key that has been created in Sentry"
+          current_environment 'production', 'The current execution environment'
+          environments ['production'], 'The environments for which Sentry is active'
         }
 
       end
